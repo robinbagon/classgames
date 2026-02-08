@@ -24,8 +24,8 @@ let timerInterval = null;
 // CREATE GAME
 // =================
 function showQRCode(code) {
-    // This uses the root URL which we mapped to join.html in server.js
-    const url = `${window.location.origin}/?code=${code}`; 
+    // We point specifically to the 9letters subfolder and join.html
+    const url = `${window.location.origin}/9letters/join.html?code=${code}`; 
 
     const qrContainer = document.getElementById("qrCode");
     qrContainer.innerHTML = ""; 
@@ -34,8 +34,12 @@ function showQRCode(code) {
         text: url,
         width: 260,
         height: 260,
-        correctLevel: QRCode.CorrectLevel.H // Higher error correction for phone cameras
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
     });
+
+    console.log("QR Code generated for:", url);
 }
 
 
