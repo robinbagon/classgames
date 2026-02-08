@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join 9Letters!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="join.css">
+</head>
+<body>
+
+<div id="joinScreen">
+    <h1>Join Game</h1>
+    <input id="codeInput" placeholder="Game code" maxlength="6">
+    <input id="nameInput" placeholder="Your name">
+    <button id="joinBtn">Join</button>
+    <p id="joinError"></p>
+</div>
+
+<p id="joinStatus" style="font-weight:bold; color:green;"></p>
+
+<div id="gameScreen" hidden>
+    <div id="timerContainer">
+    <div id="progressFill"></div>
+    <span id="timerText">Time left: <strong id="timer">0</strong>s</span>
+</div>
+    
+    <div id="letters" class="letter-grid"></div>
+
+    <input id="wordInput" placeholder="Tap letters..." readonly>
+
+    <div class="action-buttons">
+        <button id="submitBtn">SUBMIT WORD</button>
+        <button id="clearBtn">CLEAR</button>
+    </div>
+
+    <p id="feedback"></p>
+    <div class="score-container">
+    <span class="score-label">POINTS</span>
+    <div id="score">0</div>
+</div>
+</div>
+
+<div class="player-words-container">
+    <div class="words-header">
+        <span>COLLECTED WORDS</span>
+        <span id="wordCount" class="word-count-badge">0</span>
+    </div>
+    <ul id="playerWords"></ul>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="join.js"></script>
+
+</body>
+</html>

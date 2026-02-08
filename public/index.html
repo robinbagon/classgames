@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: sans-serif;
+        }
+
+        .hub-container {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .game-tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .game-tablet:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-box {
+            width: 400px;
+            height: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Optional: subtle shadow to make tablets pop on white */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+            background: #fff;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .game-label {
+            margin-top: 15px;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hub-container">
+        <a href="/prefix/index.html" class="game-tablet">
+            <div class="logo-box">
+                <img src="prefix/logo.png" alt="Prefix Puzzle">
+            </div>
+            
+        </a>
+
+        <a href="/9letters/index.html" class="game-tablet">
+            <div class="logo-box">
+                <img src="9letters/logo.png" alt="9 Letters">
+            </div>
+            
+        </a>
+    </div>
+
+</body>
+</html>

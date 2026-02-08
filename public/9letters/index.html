@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9Letters – Host</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="host.css">
+
+    <!-- QR code library used by showQRCode() -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+
+<!-- JOIN INFO (ALWAYS VISIBLE) -->
+<div id="mainContent">
+<div id="joinInfo"> 
+    <h2>
+        Join code: <strong id="code"></strong>
+    </h2>
+
+    <div class="qr-container">
+        <div id="qrCode"></div>
+    </div>
+
+    <p>
+        <span id="playerCount">0</span> players joined
+    </p>
+    <button id="playAgainBtn" style="display:none; margin-bottom: 15px;">
+        Play Again
+    </button>
+</div>
+<main id="gameArea">
+<header id="banner">
+    <img src="9letters_banner.png" alt="9 Letters Game">
+</header>
+
+<!-- SETUP (HOST CONTROLS ONLY) -->
+<div id="setup">
+    <button id="startBtn" disabled>Start Game</button>
+</div>
+
+<!-- GAME SCREEN -->
+<div id="game" hidden>
+    <div id="timer"></div>
+    <div id="letters" class="letter-grid"></div>
+    <div id="score">Class score: 0</div>
+</div>
+
+<!-- END SCREEN -->
+<div id="endScreen" hidden>
+    
+    <div class="final-score-container">
+        <span class="trophy">🏆</span>
+        <p class="final-score-label">Final Class Score</p>
+        <div id="finalClassScore" class="huge-score">0</div>
+    </div>
+
+    <div class="results-layout">
+        <div class="results-box found-box">
+            <h3>✅ Words Found</h3>
+            <ul id="foundWordList" class="column-list"></ul>
+        </div>
+
+        <div class="results-box possible-box">
+            <h3>🔍 All Possible Words</h3>
+            <ul id="allWordList" class="column-list"></ul>
+        </div>
+    </div>
+</div>
+</main>
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="host.js"></script>
+
+</body>
+</html>

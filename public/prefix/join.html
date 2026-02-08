@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Prefix Dash - Student</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+</head>
+<body>
+
+    <div id="lobby-screen" class="overlay">
+    <div class="lobby-logo-wrapper">
+        <img src="logo.png" alt="preFIX" class="main-logo">
+    </div>
+
+    <div class="input-group">
+        <input type="text" id="join-code-input" placeholder="CODE" maxlength="4" autocomplete="off">
+        <button id="join-btn" onclick="attemptJoin()">JOIN GAME</button>
+    </div>
+
+    <div id="waiting-message" class="hidden">
+        <div class="spinner"></div>
+        <p>Connected! Waiting for teacher...</p>
+    </div>
+</div>
+
+    <div id="student-app">
+        <header class="game-header">
+            
+        <div class="timer-container">
+            <div id="timer-bar"></div>
+            <span id="game-timer">01:30</span>
+        </div>
+        
+
+        </header>
+
+        <main class="game-area" style="display: none;"> 
+            <div id="game-container">
+                <div class="score-container">
+                    <span class="score-label">CURRENT SCORE</span>
+                    <div id="personal-tally">0</div> </div>
+
+
+                <div id="word-assembly-line">
+                    <span id="static-prefix">--</span>
+                    <div id="root-tiles">
+                        </div>
+                </div>
+            </div>
+
+            <div class="action-container">
+                <button id="skip-button" onclick="skipWord()">
+                <span class="skip-icon">↷</span> SKIP WORD (-5)
+                </button>
+            </div>
+        </main>
+
+        <div id="success-flash" class="hidden">SENT! 🚀</div>
+
+       <div id="results-screen" class="overlay hidden">
+    <div class="results-content">
+        <h1 class="results-title">GAME OVER</h1>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-label">TOTAL SCORE</span>
+                <span id="final-score-display" class="stat-value">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">WORDS FOUND</span>
+                <span id="final-words-display" class="stat-value">0</span>
+            </div>
+        </div>
+
+        <div class="word-history-container">
+            <span class="small-label">VOCABULARY LOG</span>
+            <div id="words-found-list" class="word-chips">
+                </div>
+        </div>
+
+        <p class="waiting-footer">Waiting for host to reset...</p>
+    </div>
+</div>
+</div>
+    </div>
+
+    <script src="student.js"></script>
+</body>
+</html>

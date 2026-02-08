@@ -1,0 +1,405 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    min-height: 100vh;
+    padding: 20px; /* Reduced padding slightly for better screen usage */
+    box-sizing: border-box;
+    display: block; /* Changed from flex to block since #mainContent handles the layout */
+}
+
+/* Banner Styling */
+#banner {
+    margin-bottom: 2rem;
+}
+
+#banner img {
+    max-width: 90vw;
+    height: auto;
+    max-height: 200px;
+} 
+
+
+/* Adjust the Join Info for the sidebar look */
+#joinInfo {
+    padding-left: 20px;
+}
+
+#joinInfo h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+#code {
+    font-size: 3.5rem; 
+    letter-spacing: 0.5rem;
+    display: block;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* QR Code centering */
+.qr-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Make the QR code fit the sidebar width */
+#qrCode img {
+    max-width: 200px !important;
+    height: auto !important;
+}
+
+/* Game Grid Styling */
+.letter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 360px;
+    margin: 30px auto;
+}
+
+.letter-cell {
+    height: 100px;
+    background: #222;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+}
+
+/* Utility to hide elements */
+[hidden] {
+    display: none !important;
+}
+
+/* Container for the side-by-side layout */
+#mainContent {
+    display: grid;
+    /* Column 1: fixed width (left), Column 2: fills remaining space */
+    grid-template-columns: 280px 1fr; 
+    width: 100%;
+    min-height: 80vh;
+    align-items: start; /* Keeps items at the top */
+}
+
+#gameArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the game grid in its column */
+    justify-content: flex-start;
+    padding-top: 20px;;
+}
+
+@media (max-width: 900px) {
+    #mainContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #joinInfo {
+        border-right: none;
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+#playAgainBtn {
+    /* Layout */
+    display: none; /* Controlled by JS */
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px 20px;
+    
+    /* Typography */
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    /* Colors & Style */
+    background: linear-gradient(135deg, #42e695 0%, #3bb2b8 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    
+    /* Shadow & Animation */
+    box-shadow: 0 6px 15px rgba(66, 230, 149, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#playAgainBtn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(66, 230, 149, 0.4);
+    filter: brightness(1.05);
+}
+
+#playAgainBtn:active {
+    transform: scale(0.98);
+}
+#startBtn {
+    /* Size and Spacing */
+    padding: 25px 60px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    /* Colors and Style */
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border: none;
+    border-radius: 50px; /* Rounded pill shape */
+    cursor: pointer;
+    
+    /* Shadow for depth */
+    box-shadow: 0 10px 20px rgba(110, 142, 251, 0.3);
+    
+    /* Animation transition */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin: 40px 0;
+}
+
+/* Hover effect: grows slightly and gets brighter */
+#startBtn:hover:not(:disabled) {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(110, 142, 251, 0.5);
+    background: linear-gradient(135deg, #7e99fb, #b388eb);
+}
+
+/* Click effect */
+#startBtn:active {
+    transform: scale(0.95);
+}
+
+#timer {
+    font-family: 'Courier New', Courier, monospace; /* Prevents text jitter */
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    min-width: 300px; /* Keeps the container steady */
+}
+
+/* Optional: Make it turn red when time is low */
+.low-time {
+    color: #d9534f !important;
+    animation: shake 0.1s infinite;
+}
+
+#score {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    padding: 15px 40px;
+    border-radius: 50px;
+    margin-top: 30px;
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(255, 154, 158, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #fff;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* The "Pop" animation class we will trigger via JS */
+.score-bump {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+#joinInfo p {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #555;
+    background: #eee;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+#playerCount {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #6e8efb; /* Matches your Start Button theme */
+}
+
+/* The "Live" Pulse Dot */
+#joinInfo p::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #28a745; /* Green for "active" */
+    border-radius: 50%;
+    display: inline-block;
+    animation: live-pulse 1.5s infinite;
+}
+
+@keyframes live-pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.final-score-container {
+    text-align: center;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border: 5px solid #ffd700; /* Gold border */
+    border-radius: 30px;
+    padding: 40px;
+    margin: 20px auto 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    max-width: 500px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.huge-score {
+    font-size: 8rem; /* Make it massive! */
+    font-weight: 900;
+    color: #333;
+    line-height: 1;
+    margin: 10px 0;
+    text-shadow: 2px 2px 0px #ffd700;
+}
+
+.final-score-label {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #888;
+    margin: 0;
+}
+
+.trophy {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Floating animation for the score card */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.results-layout {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.results-box {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.found-box { border-top: 8px solid #28a745; }
+.possible-box { border-top: 8px solid #6c757d; }
+
+.results-box h3 {
+    margin-top: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: #444;
+}
+
+/* The Four-Column Grid for the lists */
+.column-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.column-list li {
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean sans-serif is often easier to read than mono */
+    font-size: 1.1rem; /* Larger text */
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Preserving your color-coded logic */
+.word-found { 
+    color: #1b5e20;
+    font-weight: 800;
+} 
+
+.word-missed { 
+    color: #555; 
+    font-weight: 500;
+} 
+
+@media (max-width: 800px) {
+    .results-layout { flex-direction: column; align-items: center; }
+}
+
+/* Category Headers (4 Letters, 5 Letters, etc.) */
+.word-category-title {
+    font-size: 0.9rem;
+    color: #888;
+    border-bottom: 1px solid #eee;
+    margin: 15px 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    grid-column: 1 / -1; /* Spans across all 4 columns */
+    text-align: left;
+}
+
+.word-category-title {
+    grid-column: 1 / -1; /* Spans across all 4 columns */
+    font-size: 1rem;
+    font-weight: 800;
+    color: #444;
+    background-color: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin: 20px 0 10px 0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Adjust for smaller screens so it doesn't get cramped */
+@media (max-width: 1200px) {
+    .column-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

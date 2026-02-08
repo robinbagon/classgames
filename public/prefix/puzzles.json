@@ -1,0 +1,1232 @@
+[
+  {
+    "word": "UNIFORM",
+    "prefix": "UNI",
+    "root": "FORM"
+  },
+  {
+    "word": "UNICYCLE",
+    "prefix": "UNI",
+    "root": "CYCLE"
+  },
+  {
+    "word": "UNIVERSE",
+    "prefix": "UNI",
+    "root": "VERSE"
+  },
+  {
+    "word": "UNIFY",
+    "prefix": "UNI",
+    "root": "FY"
+  },
+  {
+    "word": "UNILATERAL",
+    "prefix": "UNI",
+    "root": "LATERAL"
+  },
+  {
+    "word": "UNISON",
+    "prefix": "UNI",
+    "root": "SON"
+  },
+  {
+    "word": "UNDERGROUND",
+    "prefix": "UNDER",
+    "root": "GROUND"
+  },
+  {
+    "word": "UNDERWATER",
+    "prefix": "UNDER",
+    "root": "WATER"
+  },
+  {
+    "word": "UNDERLINE",
+    "prefix": "UNDER",
+    "root": "LINE"
+  },
+  {
+    "word": "UNDERGO",
+    "prefix": "UNDER",
+    "root": "GO"
+  },
+  {
+    "word": "UNDERTAKE",
+    "prefix": "UNDER",
+    "root": "TAKE"
+  },
+  {
+    "word": "UNDERFED",
+    "prefix": "UNDER",
+    "root": "FED"
+  },
+  {
+    "word": "UNDERHAND",
+    "prefix": "UNDER",
+    "root": "HAND"
+  },
+  {
+    "word": "UNHAPPY",
+    "prefix": "UN",
+    "root": "HAPPY"
+  },
+  {
+    "word": "UNKNOWN",
+    "prefix": "UN",
+    "root": "KNOWN"
+  },
+  {
+    "word": "UNFOLD",
+    "prefix": "UN",
+    "root": "FOLD"
+  },
+  {
+    "word": "UNLOCK",
+    "prefix": "UN",
+    "root": "LOCK"
+  },
+  {
+    "word": "UNKIND",
+    "prefix": "UN",
+    "root": "KIND"
+  },
+  {
+    "word": "UNWRAP",
+    "prefix": "UN",
+    "root": "WRAP"
+  },
+  {
+    "word": "UNFAIR",
+    "prefix": "UN",
+    "root": "FAIR"
+  },
+  {
+    "word": "UNSAFE",
+    "prefix": "UN",
+    "root": "SAFE"
+  },
+  {
+    "word": "UNSEEN",
+    "prefix": "UN",
+    "root": "SEEN"
+  },
+  {
+    "word": "UNTRUE",
+    "prefix": "UN",
+    "root": "TRUE"
+  },
+  {
+    "word": "TRIANGLE",
+    "prefix": "TRI",
+    "root": "ANGLE"
+  },
+  {
+    "word": "TRIANGLE",
+    "prefix": "TRI",
+    "root": "ANGLE"
+  },
+  {
+    "word": "TRIPLE",
+    "prefix": "TRI",
+    "root": "PLE"
+  },
+  {
+    "word": "TRIPOD",
+    "prefix": "TRI",
+    "root": "POD"
+  },
+  {
+    "word": "TRICYCLE",
+    "prefix": "TRI",
+    "root": "CYCLE"
+  },
+  {
+    "word": "TRILOGY",
+    "prefix": "TRI",
+    "root": "LOGY"
+  },
+  {
+    "word": "TRIATHLON",
+    "prefix": "TRI",
+    "root": "ATHLON"
+  },
+  {
+    "word": "TRANSPORT",
+    "prefix": "TRANS",
+    "root": "PORT"
+  },
+  {
+    "word": "TRANSLATE",
+    "prefix": "TRANS",
+    "root": "LATE"
+  },
+  {
+    "word": "TRANSFORM",
+    "prefix": "TRANS",
+    "root": "FORM"
+  },
+  {
+    "word": "TRANSMIT",
+    "prefix": "TRANS",
+    "root": "MIT"
+  },
+  {
+    "word": "TRANSPLANT",
+    "prefix": "TRANS",
+    "root": "PLANT"
+  },
+  {
+    "word": "TRANSPARENT",
+    "prefix": "TRANS",
+    "root": "PARENT"
+  },
+  {
+    "word": "TRANSVERSE",
+    "prefix": "TRANS",
+    "root": "VERSE"
+  },
+  {
+    "word": "TRANSACT",
+    "prefix": "TRANS",
+    "root": "ACT"
+  },
+  {
+    "word": "THERMOMETER",
+    "prefix": "THERM",
+    "root": "OMETER"
+  },
+  {
+    "word": "THERMAL",
+    "prefix": "THERM",
+    "root": "AL"
+  },
+  {
+    "word": "THERMOSTAT",
+    "prefix": "THERM",
+    "root": "OSTAT"
+  },
+  {
+    "word": "THERMIC",
+    "prefix": "THERM",
+    "root": "IC"
+  },
+  {
+    "word": "THERMONUCLEAR",
+    "prefix": "THERM",
+    "root": "ONUCLEAR"
+  },
+  {
+    "word": "SUPERMARKET",
+    "prefix": "SUPER",
+    "root": "MARKET"
+  },
+  {
+    "word": "SUPERMAN",
+    "prefix": "SUPER",
+    "root": "MAN"
+  },
+  {
+    "word": "SUPERSTAR",
+    "prefix": "SUPER",
+    "root": "STAR"
+  },
+  {
+    "word": "SUPERPOWER",
+    "prefix": "SUPER",
+    "root": "POWER"
+  },
+  {
+    "word": "SUPERVISE",
+    "prefix": "SUPER",
+    "root": "VISE"
+  },
+  {
+    "word": "SUPERNATURAL",
+    "prefix": "SUPER",
+    "root": "NATURAL"
+  },
+  {
+    "word": "SUPERSCRIPT",
+    "prefix": "SUPER",
+    "root": "SCRIPT"
+  },
+  {
+    "word": "SUBMARINE",
+    "prefix": "SUB",
+    "root": "MARINE"
+  },
+  {
+    "word": "SUBWAY",
+    "prefix": "SUB",
+    "root": "WAY"
+  },
+  {
+    "word": "SUBTITLE",
+    "prefix": "SUB",
+    "root": "TITLE"
+  },
+  {
+    "word": "SUBMERGE",
+    "prefix": "SUB",
+    "root": "MERGE"
+  },
+  {
+    "word": "SUBTRACT",
+    "prefix": "SUB",
+    "root": "TRACT"
+  },
+  {
+    "word": "SUBURB",
+    "prefix": "SUB",
+    "root": "URB"
+  },
+  {
+    "word": "SUBJECT",
+    "prefix": "SUB",
+    "root": "JECT"
+  },
+  {
+    "word": "SUBMIT",
+    "prefix": "SUB",
+    "root": "MIT"
+  },
+  {
+    "word": "SEMICIRCLE",
+    "prefix": "SEMI",
+    "root": "CIRCLE"
+  },
+  {
+    "word": "SEMIFINAL",
+    "prefix": "SEMI",
+    "root": "FINAL"
+  },
+  {
+    "word": "SEMICOLON",
+    "prefix": "SEMI",
+    "root": "COLON"
+  },
+  {
+    "word": "SEMIANNUAL",
+    "prefix": "SEMI",
+    "root": "ANNUAL"
+  },
+  {
+    "word": "SEMIPRECIOUS",
+    "prefix": "SEMI",
+    "root": "PRECIOUS"
+  },
+  {
+    "word": "REWRITE",
+    "prefix": "RE",
+    "root": "WRITE"
+  },
+  {
+    "word": "REPLAY",
+    "prefix": "RE",
+    "root": "PLAY"
+  },
+  {
+    "word": "REBUILD",
+    "prefix": "RE",
+    "root": "BUILD"
+  },
+  {
+    "word": "REVISIT",
+    "prefix": "RE",
+    "root": "VISIT"
+  },
+  {
+    "word": "RETURN",
+    "prefix": "RE",
+    "root": "TURN"
+  },
+  {
+    "word": "REFILL",
+    "prefix": "RE",
+    "root": "FILL"
+  },
+  {
+    "word": "REMIND",
+    "prefix": "RE",
+    "root": "MIND"
+  },
+  {
+    "word": "REACT",
+    "prefix": "RE",
+    "root": "ACT"
+  },
+  {
+    "word": "REVIEW",
+    "prefix": "RE",
+    "root": "VIEW"
+  },
+  {
+    "word": "REFRESH",
+    "prefix": "RE",
+    "root": "FRESH"
+  },
+  {
+    "word": "PREVIEW",
+    "prefix": "PRE",
+    "root": "VIEW"
+  },
+  {
+    "word": "PREDICT",
+    "prefix": "PRE",
+    "root": "DICT"
+  },
+  {
+    "word": "PREHEAT",
+    "prefix": "PRE",
+    "root": "HEAT"
+  },
+  {
+    "word": "PREPAY",
+    "prefix": "PRE",
+    "root": "PAY"
+  },
+  {
+    "word": "PRESCHOOL",
+    "prefix": "PRE",
+    "root": "SCHOOL"
+  },
+  {
+    "word": "PREFIX",
+    "prefix": "PRE",
+    "root": "FIX"
+  },
+  {
+    "word": "PREPARE",
+    "prefix": "PRE",
+    "root": "PARE"
+  },
+  {
+    "word": "PREVENT",
+    "prefix": "PRE",
+    "root": "VENT"
+  },
+  {
+    "word": "OVERBOARD",
+    "prefix": "OVER",
+    "root": "BOARD"
+  },
+  {
+    "word": "OVERTIME",
+    "prefix": "OVER",
+    "root": "TIME"
+  },
+  {
+    "word": "OVERLAP",
+    "prefix": "OVER",
+    "root": "LAP"
+  },
+  {
+    "word": "OVERLOAD",
+    "prefix": "OVER",
+    "root": "LOAD"
+  },
+  {
+    "word": "OVERCOAT",
+    "prefix": "OVER",
+    "root": "COAT"
+  },
+  {
+    "word": "OVERFLOW",
+    "prefix": "OVER",
+    "root": "FLOW"
+  },
+  {
+    "word": "OVERTAKE",
+    "prefix": "OVER",
+    "root": "TAKE"
+  },
+  {
+    "word": "OVERHANG",
+    "prefix": "OVER",
+    "root": "HANG"
+  },
+  {
+    "word": "NONFICTION",
+    "prefix": "NON",
+    "root": "FICTION"
+  },
+  {
+    "word": "NONSTOP",
+    "prefix": "NON",
+    "root": "STOP"
+  },
+  {
+    "word": "NONSENSE",
+    "prefix": "NON",
+    "root": "SENSE"
+  },
+  {
+    "word": "NONVERBAL",
+    "prefix": "NON",
+    "root": "VERBAL"
+  },
+  {
+    "word": "NONPROFIT",
+    "prefix": "NON",
+    "root": "PROFIT"
+  },
+  {
+    "word": "NONTOXIC",
+    "prefix": "NON",
+    "root": "TOXIC"
+  },
+  {
+    "word": "MISTAKE",
+    "prefix": "MIS",
+    "root": "TAKE"
+  },
+  {
+    "word": "MISLEAD",
+    "prefix": "MIS",
+    "root": "LEAD"
+  },
+  {
+    "word": "MISPLACE",
+    "prefix": "MIS",
+    "root": "PLACE"
+  },
+  {
+    "word": "MISCOUNT",
+    "prefix": "MIS",
+    "root": "COUNT"
+  },
+  {
+    "word": "MISTRUST",
+    "prefix": "MIS",
+    "root": "TRUST"
+  },
+  {
+    "word": "MISREAD",
+    "prefix": "MIS",
+    "root": "READ"
+  },
+  {
+    "word": "MISSPELL",
+    "prefix": "MIS",
+    "root": "SPELL"
+  },
+  {
+    "word": "MIDNIGHT",
+    "prefix": "MID",
+    "root": "NIGHT"
+  },
+  {
+    "word": "MIDWAY",
+    "prefix": "MID",
+    "root": "WAY"
+  },
+  {
+    "word": "MIDDAY",
+    "prefix": "MID",
+    "root": "DAY"
+  },
+  {
+    "word": "MIDTERM",
+    "prefix": "MID",
+    "root": "TERM"
+  },
+  {
+    "word": "MIDPOINT",
+    "prefix": "MID",
+    "root": "POINT"
+  },
+  {
+    "word": "MIDSTREAM",
+    "prefix": "MID",
+    "root": "STREAM"
+  },
+  {
+    "word": "MIDSECTION",
+    "prefix": "MID",
+    "root": "SECTION"
+  },
+  {
+    "word": "INTERNET",
+    "prefix": "INTER",
+    "root": "NET"
+  },
+  {
+    "word": "INTERACT",
+    "prefix": "INTER",
+    "root": "ACT"
+  },
+  {
+    "word": "INTERVIEW",
+    "prefix": "INTER",
+    "root": "VIEW"
+  },
+  {
+    "word": "INTERSTATE",
+    "prefix": "INTER",
+    "root": "STATE"
+  },
+  {
+    "word": "INTERCHANGE",
+    "prefix": "INTER",
+    "root": "CHANGE"
+  },
+  {
+    "word": "INTERVAL",
+    "prefix": "INTER",
+    "root": "VAL"
+  },
+  {
+    "word": "INTERRUPT",
+    "prefix": "INTER",
+    "root": "RUPT"
+  },
+  {
+    "word": "INVISIBLE",
+    "prefix": "IN",
+    "root": "VISIBLE"
+  },
+  {
+    "word": "INCORRECT",
+    "prefix": "IN",
+    "root": "CORRECT"
+  },
+  {
+    "word": "INACTIVE",
+    "prefix": "IN",
+    "root": "ACTIVE"
+  },
+  {
+    "word": "INDIRECT",
+    "prefix": "IN",
+    "root": "DIRECT"
+  },
+  {
+    "word": "INHALE",
+    "prefix": "IN",
+    "root": "HALE"
+  },
+  {
+    "word": "INDOOR",
+    "prefix": "IN",
+    "root": "DOOR"
+  },
+  {
+    "word": "INLAND",
+    "prefix": "IN",
+    "root": "LAND"
+  },
+  {
+    "word": "INSIDE",
+    "prefix": "IN",
+    "root": "SIDE"
+  },
+  {
+    "word": "IMPOSSIBLE",
+    "prefix": "IM",
+    "root": "POSSIBLE"
+  },
+  {
+    "word": "IMPATIENT",
+    "prefix": "IM",
+    "root": "PATIENT"
+  },
+  {
+    "word": "IMPERFECT",
+    "prefix": "IM",
+    "root": "PERFECT"
+  },
+  {
+    "word": "IMPORT",
+    "prefix": "IM",
+    "root": "PORT"
+  },
+  {
+    "word": "IMPOLITE",
+    "prefix": "IM",
+    "root": "POLITE"
+  },
+  {
+    "word": "IMPACT",
+    "prefix": "IM",
+    "root": "PACT"
+  },
+  {
+    "word": "ILLEGAL",
+    "prefix": "IL",
+    "root": "LEGAL"
+  },
+  {
+    "word": "ILLOGICAL",
+    "prefix": "IL",
+    "root": "LOGICAL"
+  },
+  {
+    "word": "ILLITERATE",
+    "prefix": "IL",
+    "root": "LITERATE"
+  },
+  {
+    "word": "ILLUMINATE",
+    "prefix": "IL",
+    "root": "LUMINATE"
+  },
+  {
+    "word": "IRREGULAR",
+    "prefix": "IR",
+    "root": "REGULAR"
+  },
+  {
+    "word": "IRRESPONSIBLE",
+    "prefix": "IR",
+    "root": "RESPONSIBLE"
+  },
+  {
+    "word": "IRRELEVANT",
+    "prefix": "IR",
+    "root": "RELEVANT"
+  },
+  {
+    "word": "IRRATIONAL",
+    "prefix": "IR",
+    "root": "RATIONAL"
+  },
+  {
+    "word": "IRRITATE",
+    "prefix": "IR",
+    "root": "RITATE"
+  },
+  {
+    "word": "FORECAST",
+    "prefix": "FORE",
+    "root": "CAST"
+  },
+  {
+    "word": "FOREHEAD",
+    "prefix": "FORE",
+    "root": "HEAD"
+  },
+  {
+    "word": "FOREARM",
+    "prefix": "FORE",
+    "root": "ARM"
+  },
+  {
+    "word": "FOREGROUND",
+    "prefix": "FORE",
+    "root": "GROUND"
+  },
+  {
+    "word": "FOREMOST",
+    "prefix": "FORE",
+    "root": "MOST"
+  },
+  {
+    "word": "FORESEE",
+    "prefix": "FORE",
+    "root": "SEE"
+  },
+  {
+    "word": "FOREWORD",
+    "prefix": "FORE",
+    "root": "WORD"
+  },
+  {
+    "word": "ENFORCE",
+    "prefix": "EN",
+    "root": "FORCE"
+  },
+  {
+    "word": "ENABLE",
+    "prefix": "EN",
+    "root": "ABLE"
+  },
+  {
+    "word": "ENCLOSE",
+    "prefix": "EN",
+    "root": "CLOSE"
+  },
+  {
+    "word": "ENGAGE",
+    "prefix": "EN",
+    "root": "GAGE"
+  },
+  {
+    "word": "ENJOY",
+    "prefix": "EN",
+    "root": "JOY"
+  },
+  {
+    "word": "ENLIST",
+    "prefix": "EN",
+    "root": "LIST"
+  },
+  {
+    "word": "ENLARGE",
+    "prefix": "EN",
+    "root": "LARGE"
+  },
+  {
+    "word": "EMPOWER",
+    "prefix": "EM",
+    "root": "POWER"
+  },
+  {
+    "word": "EMBRACE",
+    "prefix": "EM",
+    "root": "BRACE"
+  },
+  {
+    "word": "EMPLOY",
+    "prefix": "EM",
+    "root": "PLOY"
+  },
+  {
+    "word": "EMPTY",
+    "prefix": "EM",
+    "root": "PTY"
+  },
+  {
+    "word": "EMPATHIZE",
+    "prefix": "EM",
+    "root": "PATHIZE"
+  },
+  {
+    "word": "EMBODY",
+    "prefix": "EM",
+    "root": "BODY"
+  },
+  {
+    "word": "EMBARK",
+    "prefix": "EM",
+    "root": "BARK"
+  },
+  {
+    "word": "DISCONNECT",
+    "prefix": "DIS",
+    "root": "CONNECT"
+  },
+  {
+    "word": "DISLIKE",
+    "prefix": "DIS",
+    "root": "LIKE"
+  },
+  {
+    "word": "DISAPPEAR",
+    "prefix": "DIS",
+    "root": "APPEAR"
+  },
+  {
+    "word": "DISAGREE",
+    "prefix": "DIS",
+    "root": "AGREE"
+  },
+  {
+    "word": "DISALLOW",
+    "prefix": "DIS",
+    "root": "ALLOW"
+  },
+  {
+    "word": "DISORDER",
+    "prefix": "DIS",
+    "root": "ORDER"
+  },
+  {
+    "word": "DISTRUST",
+    "prefix": "DIS",
+    "root": "TRUST"
+  },
+  {
+    "word": "DECODE",
+    "prefix": "DE",
+    "root": "CODE"
+  },
+  {
+    "word": "DEFLATE",
+    "prefix": "DE",
+    "root": "FLATE"
+  },
+  {
+    "word": "DEPART",
+    "prefix": "DE",
+    "root": "PART"
+  },
+  {
+    "word": "DESCEND",
+    "prefix": "DE",
+    "root": "SCEND"
+  },
+  {
+    "word": "DEFORM",
+    "prefix": "DE",
+    "root": "FORM"
+  },
+  {
+    "word": "DEGRADE",
+    "prefix": "DE",
+    "root": "GRADE"
+  },
+  {
+    "word": "DELIVER",
+    "prefix": "DE",
+    "root": "LIVER"
+  },
+  {
+    "word": "DELAY",
+    "prefix": "DE",
+    "root": "LAY"
+  },
+  {
+    "word": "ANTIVIRUS",
+    "prefix": "ANTI",
+    "root": "VIRUS"
+  },
+  {
+    "word": "ANTISOCIAL",
+    "prefix": "ANTI",
+    "root": "SOCIAL"
+  },
+  {
+    "word": "ANTIFREEZE",
+    "prefix": "ANTI",
+    "root": "FREEZE"
+  },
+  {
+    "word": "ANTIBODY",
+    "prefix": "ANTI",
+    "root": "BODY"
+  },
+  {
+    "word": "ANTITHESIS",
+    "prefix": "ANTI",
+    "root": "THESIS"
+  },
+  {
+    "word": "ANTICLIMAX",
+    "prefix": "ANTI",
+    "root": "CLIMAX"
+  },
+  {
+    "word": "COUNTERACT",
+    "prefix": "COUNTER",
+    "root": "ACT"
+  },
+  {
+    "word": "COUNTERPART",
+    "prefix": "COUNTER",
+    "root": "PART"
+  },
+  {
+    "word": "COUNTERPOINT",
+    "prefix": "COUNTER",
+    "root": "POINT"
+  },
+  {
+    "word": "COUNTERCLOCKWISE",
+    "prefix": "COUNTER",
+    "root": "CLOCKWISE"
+  },
+  {
+    "word": "COUNTERFIT",
+    "prefix": "COUNTER",
+    "root": "FIT"
+  },
+  {
+    "word": "COUNTERBALANCE",
+    "prefix": "COUNTER",
+    "root": "BALANCE"
+  },
+  {
+    "word": "ARCHENEMY",
+    "prefix": "ARCH",
+    "root": "ENEMY"
+  },
+  {
+    "word": "ARCHBISHOP",
+    "prefix": "ARCH",
+    "root": "BISHOP"
+  },
+  {
+    "word": "ARCHANGEL",
+    "prefix": "ARCH",
+    "root": "ANGEL"
+  },
+  {
+    "word": "ARCHITECT",
+    "prefix": "ARCH",
+    "root": "ITECT"
+  },
+  {
+    "word": "ARCHIVE",
+    "prefix": "ARCH",
+    "root": "IVE"
+  },
+  {
+    "word": "CIRCUMFERENCE",
+    "prefix": "CIRCUM",
+    "root": "FERENCE"
+  },
+  {
+    "word": "CIRCUMSTANCE",
+    "prefix": "CIRCUM",
+    "root": "STANCE"
+  },
+  {
+    "word": "CIRCUMNAVIGATE",
+    "prefix": "CIRCUM",
+    "root": "NAVIGATE"
+  },
+  {
+    "word": "CIRCUMVENT",
+    "prefix": "CIRCUM",
+    "root": "VENT"
+  },
+  {
+    "word": "CIRCUMFLEX",
+    "prefix": "CIRCUM",
+    "root": "FLEX"
+  },
+  {
+    "word": "CONNECT",
+    "prefix": "CON",
+    "root": "NECT"
+  },
+  {
+    "word": "CONTACT",
+    "prefix": "CON",
+    "root": "TACT"
+  },
+  {
+    "word": "CONFESS",
+    "prefix": "CON",
+    "root": "FESS"
+  },
+  {
+    "word": "CONSTRUCT",
+    "prefix": "CON",
+    "root": "STRUCT"
+  },
+  {
+    "word": "CONTAIN",
+    "prefix": "CON",
+    "root": "TAIN"
+  },
+  {
+    "word": "CONVINCE",
+    "prefix": "CON",
+    "root": "VINCE"
+  },
+  {
+    "word": "CONTENT",
+    "prefix": "CON",
+    "root": "TENT"
+  },
+  {
+    "word": "ECOSYSTEM",
+    "prefix": "ECO",
+    "root": "SYSTEM"
+  },
+  {
+    "word": "ECOLOGICAL",
+    "prefix": "ECO",
+    "root": "LOGICAL"
+  },
+  {
+    "word": "ECONOMY",
+    "prefix": "ECO",
+    "root": "NOMY"
+  },
+  {
+    "word": "ECOFRIENDLY",
+    "prefix": "ECO",
+    "root": "FRIENDLY"
+  },
+  {
+    "word": "DEMOCRACY",
+    "prefix": "DEMO",
+    "root": "CRACY"
+  },
+  {
+    "word": "DEMOGRAPHIC",
+    "prefix": "DEMO",
+    "root": "GRAPHIC"
+  },
+  {
+    "word": "DEMOLISH",
+    "prefix": "DEMO",
+    "root": "LISH"
+  },
+  {
+    "word": "MONOTONE",
+    "prefix": "MONO",
+    "root": "TONE"
+  },
+  {
+    "word": "MONOLOGUE",
+    "prefix": "MONO",
+    "root": "LOGUE"
+  },
+  {
+    "word": "MONORAIL",
+    "prefix": "MONO",
+    "root": "RAIL"
+  },
+  {
+    "word": "MONOPOLY",
+    "prefix": "MONO",
+    "root": "POLY"
+  },
+  {
+    "word": "MONOCHROME",
+    "prefix": "MONO",
+    "root": "CHROME"
+  },
+  {
+    "word": "POLYMER",
+    "prefix": "POLY",
+    "root": "MER"
+  },
+  {
+    "word": "POLYGON",
+    "prefix": "POLY",
+    "root": "GON"
+  },
+  {
+    "word": "POLYGRAPH",
+    "prefix": "POLY",
+    "root": "GRAPH"
+  },
+  {
+    "word": "POLYSYLLABIC",
+    "prefix": "POLY",
+    "root": "SYLLABIC"
+  },
+  {
+    "word": "POLYTECHNIC",
+    "prefix": "POLY",
+    "root": "TECHNIC"
+  },
+  {
+    "word": "PHILOSOPHY",
+    "prefix": "PHILO",
+    "root": "SOPHY"
+  },
+  {
+    "word": "PHILOSOPHER",
+    "prefix": "PHILO",
+    "root": "SOPHER"
+  },
+  {
+    "word": "PHILOMATH",
+    "prefix": "PHILO",
+    "root": "MATH"
+  },
+  {
+    "word": "PANORAMA",
+    "prefix": "PAN",
+    "root": "ORAMA"
+  },
+  {
+    "word": "PANDEMIC",
+    "prefix": "PAN",
+    "root": "DEMIC"
+  },
+  {
+    "word": "PANEL",
+    "prefix": "PAN",
+    "root": "EL"
+  },
+  {
+    "word": "PANTHEISM",
+    "prefix": "PAN",
+    "root": "THEISM"
+  },
+  {
+    "word": "POSTWAR",
+    "prefix": "POST",
+    "root": "WAR"
+  },
+  {
+    "word": "POSTPONE",
+    "prefix": "POST",
+    "root": "PONE"
+  },
+  {
+    "word": "POSTCARD",
+    "prefix": "POST",
+    "root": "CARD"
+  },
+  {
+    "word": "POSTSCRIPT",
+    "prefix": "POST",
+    "root": "SCRIPT"
+  },
+  {
+    "word": "POSTAGE",
+    "prefix": "POST",
+    "root": "AGE"
+  },
+  {
+    "word": "PARAGRAPH",
+    "prefix": "PARA",
+    "root": "GRAPH"
+  },
+  {
+    "word": "PARAPHRASE",
+    "prefix": "PARA",
+    "root": "PHRASE"
+  },
+  {
+    "word": "PARASITE",
+    "prefix": "PARA",
+    "root": "SITE"
+  },
+  {
+    "word": "PARAMEDIC",
+    "prefix": "PARA",
+    "root": "MEDIC"
+  },
+  {
+    "word": "PARANORMAL",
+    "prefix": "PARA",
+    "root": "NORMAL"
+  },
+  {
+    "word": "PROTOTYPE",
+    "prefix": "PROTO",
+    "root": "TYPE"
+  },
+  {
+    "word": "PROTOCOL",
+    "prefix": "PROTO",
+    "root": "COL"
+  },
+  {
+    "word": "PROTOPLASM",
+    "prefix": "PROTO",
+    "root": "PLASM"
+  },
+  {
+    "word": "PROTOZOA",
+    "prefix": "PROTO",
+    "root": "ZOA"
+  },
+  {
+    "word": "TECHNOLOGY",
+    "prefix": "TECHNO",
+    "root": "LOGY"
+  },
+  {
+    "word": "TECHNOLOGICAL",
+    "prefix": "TECHNO",
+    "root": "LOGICAL"
+  },
+  {
+    "word": "TECHNOCRAT",
+    "prefix": "TECHNO",
+    "root": "CRAT"
+  },
+  {
+    "word": "TECHNOPHOBE",
+    "prefix": "TECHNO",
+    "root": "PHOBE"
+  }
+]

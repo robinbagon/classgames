@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prefix - Host</title>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="host-wrapper">
+    <aside class="sidebar">
+        
+        <section class="join-info">
+            <span class="small-label">JOIN THE GAME</span>
+            <div id="room-code-display">----</div>
+            <div class="qr-wrapper">
+                <img id="qr-code" src="" alt="Scan to Join">
+            </div>
+            <p class="url-hint">Go to: <br><strong id="host-url-display">loading...</strong></p>
+        </section>
+
+        <section class="stats-zone">
+            <div class="stat-box">
+                <h4>TIME</h4>
+                <div id="timer">01:30</div>
+            </div>
+            <div class="stat-box">
+                <h4>CLASS TOTAL</h4>
+                <div id="class-score">0</div>
+            </div>
+            <button id="start-btn" onclick="startGame()">START GAME</button>
+        </section>
+    </aside>
+
+    <main class="main-stage">
+        <div class="logo-container">
+            <img src="logo.png" alt="PreFIX" class="game-logo">
+        </div>
+
+
+        <section class="waterfall-zone">
+            <ul id="word-stream">
+                </ul>
+        </section>
+    </main>
+
+    <div id="summary-screen" class="overlay hidden">
+    <div class="summary-content">
+        <div class="score-hero-container">
+            <div class="score-circle">
+                <span class="score-label">CLASS SCORE</span>
+                <div id="final-word-count">0</div>
+            </div>
+        </div>
+        
+        <div class="vocabulary-analysis">
+            <h2 class="analysis-title">MORPHOLOGY BREAKDOWN</h2>
+            <div id="class-word-log" class="prefix-grid"></div>
+        </div>
+
+        <button class="restart-btn" onclick="handleFullRestart()">START NEW ROUND</button>
+    </div>
+</div>
+</div>
+
+    <script src="host.js"></script>
+</body>
+</html>
