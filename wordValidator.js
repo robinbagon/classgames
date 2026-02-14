@@ -30,6 +30,10 @@ function validateWord(word, game, player) {
 
     const letters = game.letters.map(l => l.toLowerCase());
 
+    if (!player) {
+        return { valid: false, reason: "Player session lost. Please refresh!" };
+    }
+
     if (word.length < 3)
         return { valid: false, reason: "too-short" };
 
