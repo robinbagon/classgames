@@ -1228,7 +1228,7 @@
     "word": "TECHNOPHOBE",
     "prefix": "TECHNO",
     "root": "PHOBE"
-  }
+  },
   {
     "word": "AMORAL",
     "prefix": "A",
@@ -1304,7 +1304,6 @@
     "prefix": "AB",
     "root": "SOLVE"
   },
-  [
   {
     "word": "DEACTIVATE",
     "prefix": "DE",
@@ -1404,7 +1403,7 @@
     "word": "DEFOREST",
     "prefix": "DE",
     "root": "FOREST"
-  }
+  },
   {
     "word": "REACTION",
     "prefix": "RE",
@@ -1504,7 +1503,7 @@
     "word": "REARRANGE",
     "prefix": "RE",
     "root": "ARRANGE"
-  }
+  },
   {
     "word": "UNABLE",
     "prefix": "UN",
@@ -1699,7 +1698,7 @@
     "word": "PREMIX",
     "prefix": "PRE",
     "root": "MIX"
-  }
+  },
   {
     "word": "DISCONNECT",
     "prefix": "DIS",
@@ -1779,7 +1778,7 @@
     "word": "DISUNITY",
     "prefix": "DIS",
     "root": "UNITY"
-  }
+  },
   {
     "word": "MISBEHAVE",
     "prefix": "MIS",
@@ -1879,7 +1878,7 @@
     "word": "MISTREAT",
     "prefix": "MIS",
     "root": "TREAT"
-  }
+  },
   {
     "word": "SUBWAY",
     "prefix": "SUB",
@@ -1979,7 +1978,7 @@
     "word": "SUBSECTION",
     "prefix": "SUB",
     "root": "SECTION"
-  }
+  },
   {
     "word": "INACTIVE",
     "prefix": "IN",
@@ -2079,7 +2078,7 @@
     "word": "INVISIBLE",
     "prefix": "IN",
     "root": "VISIBLE"
-  }
+  },
   {
     "word": "INACTIVE",
     "prefix": "IN",
@@ -2179,7 +2178,7 @@
     "word": "INVISIBLE",
     "prefix": "IN",
     "root": "VISIBLE"
-  }
+  },
   {
     "word": "INTERACT",
     "prefix": "INTER",
@@ -2279,7 +2278,7 @@
     "word": "INTERVIEW",
     "prefix": "INTER",
     "root": "VIEW"
-  }
+  },
   {
     "word": "TRICYCLE",
     "prefix": "TRI",
@@ -2464,7 +2463,7 @@
     "word": "UNDERWORKED",
     "prefix": "UNDER",
     "root": "WORKED"
-  }   
+  }, 
   {
     "word": "OVERBOARD",
     "prefix": "OVER",
@@ -2564,7 +2563,7 @@
     "word": "OVERWORK",
     "prefix": "OVER",
     "root": "WORK"
-  }
+  },
   {
     "word": "BICYCLE",
     "prefix": "BI",
@@ -2824,7 +2823,7 @@
     "word": "MULTIUSE",
     "prefix": "MULTI",
     "root": "USE"
-  }
+  },
   {
     "word": "CONTRADICT",
     "prefix": "CONTRA",
@@ -2964,7 +2963,7 @@
     "word": "ANTIHERO",
     "prefix": "ANTI",
     "root": "HERO"
-  }
+  },
   {
     "word": "FOREHEAD",
     "prefix": "FORE",
@@ -3054,7 +3053,7 @@
     "word": "FORELEG",
     "prefix": "FORE",
     "root": "LEG"
-  }
+  },
   {
     "word": "COAUTHOR",
     "prefix": "CO",
@@ -3199,5 +3198,5 @@
     "word": "POSTHUMOUS",
     "prefix": "POST",
     "root": "HUMOUS"
-  },
+  }
 ]

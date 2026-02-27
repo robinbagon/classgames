@@ -9,37 +9,27 @@ let score = 0;
 let solvedWordsList = [];
 let gameTotalTime = 90;
 
-window.onload = () => {
-    // 1. Grab the parameters from the URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const codeFromURL = urlParams.get('code'); // Looks for 'code' in the link
+// Combined window.onload
+window.onload = async () => {
+    // 1. Load the dictionary/puzzles first
+    await initGame();
 
-    // 2. If a code exists, find the input field and fill it
+    // 2. Grab the parameters from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const codeFromURL = urlParams.get('code'); 
+
+    // 3. If a code exists, find the input field and fill it
     if (codeFromURL) {
-        const joinInput = document.getElementById('join-code-input'); // Make sure this ID matches your HTML!
+        const joinInput = document.getElementById('join-code-input');
         if (joinInput) {
             joinInput.value = codeFromURL.toUpperCase();
             
-            // 3. OPTIONAL: Automatically trigger the join button if you want
-            // const joinButton = document.getElementById('join-btn');
-            // if (joinButton) joinButton.click();
+            // Optional: Auto-click join if you want
+            // attemptJoin(); 
         }
     }
 };
 
-window.onload = async () => {
-    await initGame();
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const codeFromURL = urlParams.get('code');
-
-    if (codeFromURL) {
-        const inputField = document.getElementById('join-code-input');
-        if (inputField) {
-            inputField.value = codeFromURL.toUpperCase();
-        }
-    }
-};
 
 async function initGame() {
     try {

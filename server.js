@@ -92,8 +92,13 @@ function end9LettersGame(code) {
 
     const foundWordsSet = new Set();
     for (const playerId in game.players) {
-        game.players[playerId].words.forEach(w => foundWordsSet.add(w.toLowerCase()));
+        const p = game.players[playerId];
+        // SAFETY CHECK: Ensure player and their words array exist
+        if (p && p.words) {
+            p.words.forEach(w => foundWordsSet.add(w.toLowerCase()));
+        }
     }
+    
     const foundWords = Array.from(foundWordsSet).sort((a,b) => b.length - a.length || a.localeCompare(b));
     const allWords = getAllPossibleWords(game).sort((a,b) => b.length - a.length || a.localeCompare(b));
 
@@ -139,27 +144,35 @@ nlNamespace.on("connection", socket => {
         }
     });
 
-    socket.on("submit-word", ({ code, word }) => {
-        const game = gameManager.getGame(code);
-        if (!game || !game.started || Date.now() > game.endTime) return;
-        const player = game.players[socket.id];
-        const result = validateWord(word, game, player);
+socket.on("submit-word", ({ code, word }) => {
+    const game = gameManager.getGame(code);
+    
+    if (!game || !game.started || Date.now() > game.endTime) return;
 
-        if (!result.valid) {
-            socket.emit("word-result", result);
-            socket.emit("player-words", player.words);
-            return;
-        }
+    const player = game.players[socket.id];
+    if (!player) {
+        console.warn(`Submission rejected: Socket ${socket.id} not found in game ${code}`);
+        socket.emit("word-result", { valid: false, reason: "session-lost" });
+        return;
+    }
 
-        const points = Math.pow(word.length, 2); 
-        player.score += points;
-        player.words.push(word);
-        game.classScore += points;
+    const result = validateWord(word, game, player);
 
-        socket.emit("word-result", { valid: true, points, total: player.score });
-        socket.emit("player-words", player.words);
-        nlNamespace.to(code).emit("class-score", game.classScore);
-    });
+    if (!result.valid) {
+        socket.emit("word-result", result);
+        if (player.words) socket.emit("player-words", player.words);
+        return;
+    }
+
+    const points = Math.pow(word.length, 2); 
+    player.score += points;
+    player.words.push(word);
+    game.classScore += points;
+
+    socket.emit("word-result", { valid: true, points, total: player.score });
+    socket.emit("player-words", player.words);
+    nlNamespace.to(code).emit("class-score", game.classScore);
+});
 
     socket.on("host-restart", ({ code }) => {
         const game = gameManager.getGame(code);
