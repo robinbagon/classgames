@@ -28,11 +28,33 @@ const prefixNamespace = io.of('/prefix');
 const prefixRoomStates = {};
 
 prefixNamespace.on('connection', (socket) => {
+    
+    // Helper function to update everyone in the room on the current count
+    const updateCount = (roomCode) => {
+        const clients = prefixNamespace.adapter.rooms.get(roomCode);
+        const numClients = clients ? clients.size : 0;
+        // We subtract 1 to exclude the Host from the player count
+        const playerCount = Math.max(0, numClients - 1); 
+        prefixNamespace.to(roomCode).emit('updatePlayerCount', playerCount);
+    };
+
     socket.on('joinRoom', (roomCode) => {
         socket.join(roomCode);
+        
+        // NEW: Update count when someone joins
+        updateCount(roomCode);
+
         if (prefixRoomStates[roomCode] === 'playing') {
             socket.emit('gameAlreadyInProgress');
         }
+    });
+
+    // NEW: Update count when someone leaves/disconnects
+    socket.on('disconnecting', () => {
+        socket.rooms.forEach(roomCode => {
+            // We use a small timeout because the socket hasn't fully left the room yet
+            setTimeout(() => updateCount(roomCode), 100);
+        });
     });
 
     socket.on('submitWord', (data) => {
@@ -58,7 +80,6 @@ prefixNamespace.on('connection', (socket) => {
         prefixNamespace.to(roomCode).emit('resetClient');
     });
 });
-
 // ---------------------------------------------------------
 // 2. 9LETTERS GAME LOGIC (Namespace: /9letters)
 // ---------------------------------------------------------

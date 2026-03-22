@@ -40,6 +40,14 @@ if (qrElement) {
     qrElement.src = qrSource;
 }
 
+// Listen for player count updates from the server
+socket.on('updatePlayerCount', (count) => {
+    const countDisplay = document.getElementById('player-count');
+    if (countDisplay) {
+        countDisplay.textContent = count;
+    }
+});
+
 // --- GAME LOGIC ---
 
 let classScore = 0;

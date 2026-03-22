@@ -816,3 +816,18 @@ body {
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
+
+.player-count-wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#player-count {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffd700; /* Or your theme color */
+}
