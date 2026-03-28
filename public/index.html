@@ -20,6 +20,7 @@
             gap: 50px;
             flex-wrap: wrap;
             justify-content: center;
+            padding: 20px;
         }
 
         .game-tablet {
@@ -27,7 +28,7 @@
             flex-direction: column;
             align-items: center;
             text-decoration: none;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .game-tablet:hover {
@@ -42,10 +43,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* Optional: subtle shadow to make tablets pop on white */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             border: 1px solid #eee;
             background: #fff;
+            padding: 20px; /* Added some padding so logos don't touch edges */
+            box-sizing: border-box;
         }
 
         .logo-box img {
@@ -61,6 +63,7 @@
             font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -71,14 +74,21 @@
             <div class="logo-box">
                 <img src="prefix/logo.png" alt="Prefix Puzzle">
             </div>
-            
+            <div class="game-label">Prefix Puzzle</div>
         </a>
 
         <a href="/9letters/index.html" class="game-tablet">
             <div class="logo-box">
                 <img src="9letters/logo.png" alt="9 Letters">
             </div>
-            
+            <div class="game-label">9 Letters</div>
+        </a>
+
+        <a href="/spelling/host.html" class="game-tablet">
+            <div class="logo-box">
+                <img src="/spelling/spellit-logo.png" alt="Spell It">
+            </div>
+            <div class="game-label">Spell It</div>
         </a>
     </div>
 

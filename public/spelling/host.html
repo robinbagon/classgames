@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spellit - HOST</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="spelling.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body class="host-page">
+
+    <header class="player-header">
+        <div id="player-list">
+            </div>
+    </header>
+
+    <aside class="host-sidebar">
+        <div id="joinInfo">
+            <h2>JOIN AT:</h2>
+            <div class="qr-container">
+                <div id="qrcode"></div>
+            </div>
+            <p>ROOM CODE:</p>
+            <span id="code">----</span>
+        </div>
+
+        <div id="controls">
+            <button id="start-btn" onclick="startGame()">START GAME</button>
+        </div>
+    </aside>
+
+    <main class="main-display">
+        <div class="logo-container">
+            <img src="spellit-logo.png" alt="SpellIt! Logo" class="host-logo">
+        </div>
+        <h1 id="question-header">JOIN THE GAME</h1>
+        
+        <div id="graph-zone" class="bar-container hidden">
+            <div class="bar-wrapper">
+                <div id="bar-0" class="bar" style="height: 5%"></div>
+                <div id="label-0" class="bar-label">Option A</div>
+            </div>
+            <div class="bar-wrapper">
+                <div id="bar-1" class="bar" style="height: 5%"></div>
+                <div id="label-1" class="bar-label">Option B</div>
+            </div>
+            <div class="bar-wrapper">
+                <div id="bar-2" class="bar" style="height: 5%"></div>
+                <div id="label-2" class="bar-label">Option C</div>
+            </div>
+        </div>
+
+        <div id="winner-screen" class="screen hidden">
+            <div class="winner-backdrop">
+                 <div class="winner-card">
+                    <div class="trophy-wrapper">
+                    <span class="floating-trophy">🏆</span>
+                    <div class="trophy-shadow"></div>
+                    </div>
+            
+            <h1 class="winner-label">CHAMPION</h1>
+            <h2 id="winner-name">---</h2>
+            
+            <p class="winner-subtext">The last speller standing!</p>
+            
+                <button class="restart-btn" onclick="requestRestart()">
+                <span>PLAY AGAIN!</span>
+                </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="spelling-host.js"></script>
+</body>
+</html>

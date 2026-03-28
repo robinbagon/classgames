@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Spellit - Play</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="spelling.css">
+</head>
+<body>
+
+    <div id="login-screen" class="screen">
+    <div class="join-card">
+        <div class="join-header">
+            <img src="spellit-logo.png" alt="Site Logo" class="join-logo">
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="player-name" placeholder=" " maxlength="12" required>
+            <label for="player-name">Your Name</label>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="room-code" placeholder=" " style="text-transform: uppercase;" autocomplete="off" required>
+            <label for="room-code">Room Code</label>
+        </div>
+
+        <button id="join-btn" onclick="joinGame()" class="glow-btn">
+            JOIN GAME
+        </button>
+    </div>
+    </div>
+
+    <div id="lobby-screen" class="screen hidden">
+        <div class="card">
+            <div id="status-badge" class="badge">ACTIVE</div>
+            <h2>Waiting for Teacher...</h2>
+            <p>You are in! Get ready to spell.</p>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <div id="game-screen" class="screen hidden">
+        <div id="player-status-bar" class="status-bar active-state">
+        <span id="status-text">YOU ARE COMPETING</span>
+        </div>
+        <div class="timer-bar-container">
+            <div id="timer-fill" class="timer-fill"></div>
+        </div>
+        <div style="width: 100%; max-width: 400px;">
+        <h2 class="prompt-text">Which is correct?</h2>
+        <div id="options-container" class="options-grid"></div>
+        <div id="feedback-area" class="feedback-text"></div>
+    </div>
+    </div>
+
+    <div id="game-over-screen" class="screen hidden">
+    <div id="winner-celebration" class="card hidden">
+        <span style="font-size: 5rem; display: block;">🏆</span>
+        <h1 class="champion-text">CHAMPION!</h1>
+        <p>You are the last speller standing.</p>
+        <div class="confetti-mini"></div>
+    </div>
+
+    <div id="normal-game-over" class="card">
+        <h1 id="result-title">GAME OVER!</h1>
+        <p id="winner-announcement"></p>
+        <hr>
+        <p>The teacher will restart soon!</p>
+        <div class="loader"></div> 
+    </div>
+    </div>
+
+    <script src="spelling.js"></script>
+</body>
+</html>
