@@ -72,45 +72,95 @@ function submitAnswer(btn) {
 // The server sends a number (5, 4, 3...) and we just update the bar width
 socket.on('timer-tick', (timeLeft) => {
     const timerFill = document.getElementById('timer-fill');
-    if (timerFill) {
-        const totalTime = 8; // Matches the server's starting time
-        const width = (timeLeft / totalTime) * 100;
-        timerFill.style.width = width + "%";
-        
-        // Visual warning: turn the bar red when 2 seconds remain
-        timerFill.style.background = timeLeft <= 2 ? "#e74c3c" : "#f1c40f";
+    const header = document.getElementById('question-header');
+    
+    if (header) {
+        header.innerText = timeLeft > 0 ? `⏳ ${timeLeft}s` : "⌛ TIME'S UP!";
+    }
+
+    if (timerFill && timeLeft <= 2) {
+        timerFill.style.background = "#e74c3c"; // Turn red for the final stretch
     }
 });
+
+let localTimer; 
 
 socket.on('new-question', (data) => {
     showScreen('game-screen');
     const container = document.getElementById('options-container');
     const feedback = document.getElementById('feedback-area');
+    const timerDisplay = document.getElementById('timer-display');
+    const timerFill = document.getElementById('timer-fill'); // The progress bar
     
     container.innerHTML = '';
-    feedback.innerText = ''; // Clear feedback from last round
+    feedback.innerText = ''; 
+
+    // 1. RESET TIMER VISUALS IMMEDIATELY
+    if (localTimer) clearInterval(localTimer);
     
-    // Create buttons
+    if (timerFill) {
+        timerFill.style.transition = 'none'; // Snap back to full
+        timerFill.style.width = '100%';
+        timerFill.style.backgroundColor = '#f1c40f'; // Reset to yellow
+        timerFill.offsetHeight; // Force browser to acknowledge the reset
+        
+        // Start the smooth 8-second slide to 0
+        timerFill.style.transition = `width ${data.timer}s linear`;
+        timerFill.style.width = '0%';
+    }
+
+    // 2. START NUMERICAL COUNTDOWN (Slightly aggressive to beat the server)
+    let timeLeft = data.timer - 1; 
+    if (timerDisplay) {
+        timerDisplay.innerText = Math.max(timeLeft, 0);
+        timerDisplay.style.color = "inherit";
+    }
+
+    localTimer = setInterval(() => {
+        timeLeft--;
+        
+        if (timerDisplay) {
+            timerDisplay.innerText = Math.max(timeLeft, 0);
+            if (timeLeft <= 3) {
+                timerDisplay.style.color = "#ef4444";
+                if (timerFill) timerFill.style.backgroundColor = "#ef4444";
+            }
+        }
+
+        if (timeLeft <= 0) {
+            clearInterval(localTimer);
+            // LOCKOUT: Stop them from clicking late
+            document.querySelectorAll('.option-btn').forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = "0.5";
+            });
+            if (feedback) feedback.innerText = "Locked In!";
+        }
+    }, 1000);
+    // ------------------------------
+
+    // Create buttons as usual
     data.options.forEach(opt => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
         btn.innerText = opt;
+        
         btn.onclick = () => {
-            // Only allow selection if the round is still active
+            // Check if time has already run out locally
+            if (timeLeft <= 0) return;
+
             document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
             btn.classList.add('selected');
             
+            // Use 'time' instead of 'timestamp' to match your server-side logic
             socket.emit('submit-answer', { 
                 roomCode, 
                 answer: opt, 
-                timestamp: Date.now() 
+                time: Date.now() 
             });
         };
         container.appendChild(btn);
     });
-
-    // NOTICE: We removed the setInterval from here. 
-    // The bar is now controlled entirely by the 'timer-tick' event above.
 });
 
 socket.on('round-results', (data) => {

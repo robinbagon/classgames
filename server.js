@@ -380,7 +380,9 @@ function sendNextQuestion(roomCode) {
         if (timeLeft <= 0) {
             clearInterval(game.timer);
             game.timer = null; // Clean up the reference
-            processRound(roomCode);
+            setTimeout(() => {
+                processRound(roomCode);
+            }, 500);
         }
     }, 1000);
 }
