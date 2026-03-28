@@ -3,6 +3,26 @@ let playerName = "";
 let roomCode = "";
 let isActive = true;
 
+// TOP of spelling.js
+window.addEventListener('DOMContentLoaded', () => {
+    // 1. Check the URL for "?room=XXXX"
+    const urlParams = new URLSearchParams(window.location.search);
+    const roomFromUrl = urlParams.get('room');
+
+    // 2. If a room code exists in the URL, find the input and fill it
+    if (roomFromUrl) {
+        const roomInput = document.getElementById('room-code');
+        document.getElementById('player-name').focus();
+        if (roomInput) {
+            roomInput.value = roomFromUrl.toUpperCase();
+            
+            // Optional: Visually indicate it's locked in
+            roomInput.style.backgroundColor = "#f0fdf4"; // Light green tint
+            roomInput.style.borderColor = "#22c55e";
+        }
+    }
+});
+
 function joinGame() {
     playerName = document.getElementById('player-name').value.trim();
     roomCode = document.getElementById('room-code').value.toUpperCase().trim();
