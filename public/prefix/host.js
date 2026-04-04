@@ -17,24 +17,29 @@ function generateJoinCode() {
 const myRoomCode = generateJoinCode();
 document.getElementById('room-code-display').innerText = myRoomCode;
 
-// Tell the server we are the host
+// 1. Tell the server we are the host
 socket.emit('joinRoom', myRoomCode);
 
-// 4. Update the UI with the Join URL (using current site origin)
-const hostURL = window.location.origin;
-document.getElementById('host-url-display').innerText = hostURL.replace('https://', '').replace('http://', '');
+// 2. Build the Join URL pointing specifically to the prefix folder
+// This ensures it works on localhost and wrdgms.com
+const joinURL = `${window.location.origin}/prefix/join.html?code=${myRoomCode}`;
 
-// 1. Detect the current folder (9letters or prefix) automatically
-const currentPath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+// 3. Update the UI Text Displays
+// Show the clean URL (wrdgms.com/prefix/join.html)
+const cleanDisplayURL = joinURL.split('?')[0].replace('https://', '').replace('http://', '');
+const hostUrlDisplay = document.getElementById('host-url-display');
+if (hostUrlDisplay) {
+    hostUrlDisplay.innerText = cleanDisplayURL;
+}
 
-// 2. Build the URL dynamically
-// window.location.origin will be 'http://localhost:3000' or 'https://classgames.onrender.com'
-const joinURL = `${window.location.origin}${currentPath}/join.html?code=${myRoomCode}`;
+const roomCodeDisplay = document.getElementById('room-code-display');
+if (roomCodeDisplay) {
+    roomCodeDisplay.innerText = myRoomCode;
+}
 
-// 3. Generate the QR Code using the external API
+// 4. Generate the QR Code using the specific joinURL
 const qrSource = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(joinURL)}`;
 
-// 4. Update the image on your page
 const qrElement = document.getElementById('qr-code');
 if (qrElement) {
     qrElement.src = qrSource;
